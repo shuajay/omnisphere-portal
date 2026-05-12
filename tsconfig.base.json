@@ -1,0 +1,58 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "paths": {
+      "auth/Routes": ["./apps/auth/src/app/remote-entry/entry.routes.ts"],
+      "coreHr/Routes": ["./apps/core-hr/src/app/remote-entry/entry.routes.ts"],
+      "workforce/Routes": [
+        "./apps/workforce/src/app/remote-entry/entry.routes.ts"
+      ],
+      "talent/Routes": ["./apps/talent/src/app/remote-entry/entry.routes.ts"],
+      "@omnisphere-portal/ui": ["./libs/shared/ui/src/index.ts"],
+      "@omnisphere-portal/data-access": [
+        "./libs/shared/data-access/src/index.ts"
+      ],
+      "@omnisphere-portal/util": ["./libs/shared/util/src/index.ts"],
+      "@omnisphere-portal/feature-employees": [
+        "./libs/core-hr/feature-employees/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-leave": [
+        "./libs/core-hr/feature-leave/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-documents": [
+        "./libs/core-hr/feature-documents/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-attendance": [
+        "./libs/workforce/feature-attendance/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-payroll": [
+        "./libs/workforce/feature-payroll/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-analytics": [
+        "./libs/workforce/feature-analytics/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-recruitment": [
+        "./libs/talent/feature-recruitment/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-training": [
+        "./libs/talent/feature-training/src/index.ts"
+      ],
+      "@omnisphere-portal/feature-performance": [
+        "./libs/talent/feature-performance/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
