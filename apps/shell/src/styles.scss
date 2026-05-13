@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    
+    --primary-colour: #00A3FF;
+    --background-colour: #f0f4f8;
+    --card--colour: #ffffff;
+    --primary-text-colour: #001b3d;
+    --secondary-text-colour: #547191;
+    --border-colour: #d1dce8;
+    --success-colour: #00D1FF;
+    --error-colour: #FF4B4B;
+
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Typography */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --font-size-sm: 14px;
+    --font-size-lg: 18px;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    /* Dimensions */
+    --header-height: 60px;
+    --sidebar-width: 200px;
+    --footer-height: 40px;
+    --content-max-width: 1200px;
+    --sidebar-collapsed-width: 80px;
+    --sidebar-height: 100vh;
+    --logo-size: 200px;
+
+    
+}
+
+[data-theme="dark"] {
+    --primary-colour: #00A3FF;
+    --background-colour: #000F21;
+    --card--colour: #001B3D;
+    --primary-text-colour: #F0F4F8;
+    --secondary-text-colour: #BCC6D1;
+    --border-colour: #1A3A5F;
+    --success-colour: #00D1FF;
+    --error-colour: #FF4B4B;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--background-colour);
+    color: var(--primary-text-colour);
+    margin: 0;
+}

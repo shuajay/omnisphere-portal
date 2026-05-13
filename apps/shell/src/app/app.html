@@ -1,8 +1,16 @@
-<ul class="remote-menu">
-  <li><a routerLink="/">Home</a></li>
-  <li><a routerLink="auth">Auth</a></li>
-  <li><a routerLink="coreHr">CoreHr</a></li>
-  <li><a routerLink="workforce">Workforce</a></li>
-  <li><a routerLink="talent">Talent</a></li>
-</ul>
-<router-outlet></router-outlet>
+<!-- <button (click)="toggleTheme()" >
+  {{ isDarkTheme ? 'Light Mode' : 'Dark Mode' }}
+</button> -->
+<lib-sidebar>
+  <ul class="remote-menu">
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="auth">Auth</a></li>
+    <li><a routerLink="coreHr">CoreHr</a></li>
+    <li><a routerLink="workforce">Workforce</a></li>
+    <li><a routerLink="talent">Talent</a></li>
+  </ul>
+</lib-sidebar>
+<main>
+  <router-outlet></router-outlet>
+</main>
+
