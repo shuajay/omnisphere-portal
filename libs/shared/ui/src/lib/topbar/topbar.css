@@ -1,0 +1,62 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    width: 90vw;
+    padding: 0 var(--spacing-lg);
+    background-color: var(--background-colour);
+    color: var(--primary-text-colour);
+    border-bottom: 3px solid var(--border-colour);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    color: var(--primary-text-colour);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+
+/* The container - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--background-colour);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; /* Stay on top of other elements */
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  color: var(--primary-text-colour);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  &:hover{
+    color: var(--secondary-text-colour);
+  }
+}
