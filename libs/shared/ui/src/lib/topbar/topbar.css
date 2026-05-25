@@ -42,6 +42,17 @@ nav {
     font-size: var(--font-size-sm);
 }
 
+.search-button {
+    background-color: transparent;
+    border: none;
+    color: var(--primary-text-colour);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+
+    &:hover {
+        color: var(--secondary-text-colour);
+    }
+}
 
 /* The container - needed to position the dropdown content */
 .dropdown {
