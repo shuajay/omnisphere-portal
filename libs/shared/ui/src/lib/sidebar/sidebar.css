@@ -30,22 +30,6 @@
     list-style: none;
     margin: 0;
 
-    /* &>li {
-        width: 100%;
-        a {
-            display: block;
-            width: 100%;
-            padding: var(--spacing-sm) var(--spacing-md);
-            color: var(--text-colour);
-            text-decoration: none;
-            border-radius: var(--border-radius);
-            transition: background-color 0.3s;
-
-            &:hover {
-                background-color: var(--hover-colour);
-            }
-        }
-    } */
     &>li {
         width: 100%;
 
@@ -61,6 +45,7 @@
 
             &:hover {
                 background-color: var(--secondary-text-colour);
+                color: var(--background-colour);
             }
         }
     }
