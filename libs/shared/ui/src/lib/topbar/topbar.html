@@ -1,6 +1,6 @@
 <div class="topbar">
     <div class="logo-container">
-        <h1>Omnisphere Portal</h1>
+        <span class="logo-title">Omnisphere Portal</span>
     </div>
     <nav>
         <div class="topbar-content">
@@ -9,14 +9,14 @@
       type="button"
       title="Help"
       aria-label="View help"
-      class="btn btn-icon btn-md"
+      class="btn btn-icon"
     >
       <fa-icon [icon]="faCircleQuestion"></fa-icon>
     </button>
 
     <button
       type="button"
-      class="btn btn-icon btn-md"
+      class="btn btn-icon"
       title="Notifications"
       aria-label="View notifications"
     >
@@ -28,7 +28,7 @@
       (click)="toggleTheme()" 
       [title]="isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode'" 
       [attr.aria-label]="isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode'"
-      class="btn btn-icon btn-md"
+      class="btn btn-icon"
     >
       <fa-icon [icon]="isDarkTheme ? faSun : faMoon"></fa-icon>
     </button>
@@ -36,7 +36,7 @@
     <div class="dropdown">
       <button
       type="button"
-      class="btn btn-icon btn-md"
+      class="btn btn-icon"
       title="User"
       aria-label="User"
       >
@@ -48,15 +48,6 @@
         <a href="#" (click)="logout()">Logout</a>
       </div>
     </div>
-    
-
-    <!-- <button 
-      type="button" 
-      (click)="logout()"
-      class="btn btn-secondary"
-      >
-      Logout
-    </button> -->
   </div>
     </nav>
 </div>
