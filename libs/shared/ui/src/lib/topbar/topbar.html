@@ -1,53 +1,59 @@
 <div class="topbar">
-    <div class="logo-container">
-        <span class="logo-title">Omnisphere Portal</span>
-    </div>
-    <nav>
-        <div class="topbar-content">
-
-    <button
-      type="button"
-      title="Help"
-      aria-label="View help"
-      class="btn btn-icon"
-    >
-      <fa-icon [icon]="faCircleQuestion"></fa-icon>
-    </button>
-
-    <button
-      type="button"
-      class="btn btn-icon"
-      title="Notifications"
-      aria-label="View notifications"
-    >
-      <fa-icon [icon]="faBell"></fa-icon>
-    </button>
-
-    <button 
-      type="button" 
-      (click)="toggleTheme()" 
-      [title]="isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode'" 
-      [attr.aria-label]="isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode'"
-      class="btn btn-icon"
-    >
-      <fa-icon [icon]="isDarkTheme ? faSun : faMoon"></fa-icon>
-    </button>
-
-    <div class="dropdown">
-      <button
-      type="button"
-      class="btn btn-icon"
-      title="User"
-      aria-label="User"
-      >
-        <fa-icon [icon]="faCircleUser"></fa-icon>
-      </button>
-      <div class="dropdown-content">
-        <a href="#">Profile</a>
-        <a href="#">Settings</a>
-        <a href="#" (click)="logout()">Logout</a>
-      </div>
-    </div>
+  <div class="logo-container">
+      <span class="logo-title">Omnisphere Portal</span>
   </div>
-    </nav>
+
+  <nav>
+    <div class="topbar-content">
+
+      <button
+        type="button"
+        title="Help"
+        aria-label="View help"
+        class="btn btn-icon"
+      >
+        <fa-icon [icon]="faCircleQuestion"></fa-icon>
+      </button>
+
+      <button 
+        type="button" 
+        (click)="toggleTheme()" 
+        [title]="isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode'" 
+        [attr.aria-label]="isDarkTheme ? 'Switch to light mode' : 'Switch to dark mode'"
+        class="btn btn-icon"
+        title="Toggle theme"
+      >
+        <fa-icon [icon]="isDarkTheme ? faSun : faMoon"></fa-icon>
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-icon"
+        title="Notifications"
+        aria-label="View notifications"
+      >
+        <fa-icon [icon]="faBell"></fa-icon>
+      </button>
+
+      <div class="dropdown">
+        
+        <button
+          type="button"
+          class="btn btn-icon"
+          title="User"
+          aria-label="User"
+        >
+          <fa-icon [icon]="faCircleUser"></fa-icon>
+        </button>
+
+        <div class="dropdown-content">
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+          <a href="#" (click)="logout()">Logout</a>
+        </div>
+
+      </div>
+      
+    </div>
+  </nav>
 </div>

@@ -3,28 +3,34 @@
     align-items: center;
     justify-content: space-between;
     height: var(--header-height);
-    width: 90vw;
     padding: 0 var(--spacing-lg);
     background-color: var(--background-colour);
     color: var(--primary-text-colour);
     border-bottom: 3px solid var(--border-colour);
 }
 
-.logo-container {
+.topbar-content{
     display: flex;
     align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.logo-container {
+    display: block;
+    align-items: flex-start;
 }
 
 .logo-title {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-family);
     color: var(--primary-text-colour);
 }
 
 
 nav {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
 
@@ -38,15 +44,18 @@ nav {
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%; /* Position below the dropdown button */
+  right: 0; /* Align to the right edge of the button */
   background-color: var(--background-colour);
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1; /* Stay on top of other elements */
 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
 }
 
 /* Style the links inside the dropdown */
