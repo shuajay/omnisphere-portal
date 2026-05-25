@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSun, faMoon, faBell, faCircleQuestion, faCircleUser } from '@omnisphere-portal/util'
+import { faSun, 
+  faMoon, 
+  faBell, 
+  faCircleQuestion, 
+  faCircleUser, 
+  faMagnifyingGlass, 
+} from '@omnisphere-portal/util'
 
 @Component({
   selector: 'lib-topbar',
@@ -17,6 +23,7 @@ export class Topbar {
   faBell = faBell;
   faCircleQuestion = faCircleQuestion;
   faCircleUser = faCircleUser;
+  faSearch = faMagnifyingGlass;
 
   constructor() {
     const savedTheme = localStorage.getItem('theme');

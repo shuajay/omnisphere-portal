@@ -4,4 +4,5 @@ export {
     faBell,
     faCircleQuestion,
     faCircleUser,
+    faMagnifyingGlass,
 } from '@fortawesome/free-solid-svg-icons';
