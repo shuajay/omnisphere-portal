@@ -11,6 +11,9 @@
 }
 
 .logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-bottom: var(--spacing-lg);
 }
 
@@ -18,6 +21,7 @@
     width: var(--logo-size);
     height: auto;
     margin: 0;
+    display: block
 }
 
 .remote-menu {
