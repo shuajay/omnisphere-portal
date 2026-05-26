@@ -4,10 +4,30 @@
     </div>
     <nav>
         <ul class="remote-menu">
-            <li><a routerLink="/dashboard">Home</a></li>
-            <li><a routerLink="/coreHr">CoreHr</a></li>
-            <li><a routerLink="/workforce">Workforce</a></li>
-            <li><a routerLink="/talent">Talent</a></li>
+            <li><a routerLink="/dashboard">
+                <fa-icon [icon]="faTachographDigital"></fa-icon>
+                Dashboard
+            </a></li>
+            <li><a routerLink="/coreHr">
+                <fa-icon [icon]="faBriefcase"></fa-icon>
+                Core HR
+            </a></li>
+            <li><a routerLink="/workforce">
+                <fa-icon [icon]="faUsers"></fa-icon>
+                Workforce
+            </a></li>
+            <li><a routerLink="/talent">
+                <fa-icon [icon]="faMedal"></fa-icon>
+                Talent
+            </a></li>
+            <li><a routerLink="/finance">
+                <fa-icon [icon]="faCreditCard"></fa-icon>
+                Finance
+            </a></li>
+            <li><a routerLink="/analytics">
+                <fa-icon [icon]="faChartSimple"></fa-icon>
+                Analytics
+            </a></li>
         </ul>
     </nav>  
 </aside>

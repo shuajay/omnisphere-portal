@@ -5,4 +5,11 @@ export {
     faCircleQuestion,
     faCircleUser,
     faMagnifyingGlass,
+    faUsers,
+    faUser,
+    faMedal,
+    faTachographDigital,
+    faBriefcase,
+    faCreditCard,
+    faChartSimple,
 } from '@fortawesome/free-solid-svg-icons';

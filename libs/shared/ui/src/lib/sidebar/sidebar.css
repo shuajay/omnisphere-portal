@@ -2,8 +2,8 @@
     height: var(--sidebar-height);
     width: var(--sidebar-width);
     background-color: var(--background-colour);
-    display: flex;
-    flex-direction: column;
+    display: block;
+    left: 0;
     align-items: center;
     box-sizing: border-box;
     padding-top: var(--spacing-md);
