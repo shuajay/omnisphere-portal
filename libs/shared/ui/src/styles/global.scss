@@ -1,7 +1,9 @@
 :root {
     --primary-colour: #00A3FF;
     --background-colour: #f0f4f8;
-    --card--colour: #ffffff;
+    --background-gradient: linear-gradient(135deg, #dce8f5 0%, #f0f4f8 50%, #e2ecf6 100%);
+    --card-colour: #ffffff;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --primary-text-colour: #001b3d;
     --secondary-text-colour: #547191;
     --border-colour: #d1dce8;
@@ -48,12 +50,14 @@
 [data-theme="dark"] {
     --primary-colour: #00A3FF;
     --background-colour: #000F21;
-    --card--colour: #001B3D;
+    --background-gradient: radial-gradient(ellipse at 60% 30%, #0d2140 0%, #000f21 60%, #000810 100%);
+    --card-colour: #001B3D;
     --primary-text-colour: #F0F4F8;
     --secondary-text-colour: #BCC6D1;
     --border-colour: #1A3A5F;
     --success-colour: #00D1FF;
     --error-colour: #FF4B4B;
+    --card-shadow: 0 4px 12px rgba(0, 163, 255, 0.12), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 body {
