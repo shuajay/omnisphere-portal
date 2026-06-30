@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSun, 
   faMoon, 
@@ -25,12 +26,19 @@ export class Topbar {
   faCircleUser = faCircleUser;
   faSearch = faMagnifyingGlass;
 
+  private router = inject(Router);
+
   constructor() {
-    const savedTheme = localStorage.getItem('theme');
+    let savedTheme: string | null = null;
+    try {
+      savedTheme = localStorage.getItem('theme');
+    } catch {
+      // localStorage may be unavailable (e.g. private browsing)
+    }
     this.isDarkTheme = savedTheme === 'dark';
     document.documentElement.setAttribute(
-      `data-theme`,
-      savedTheme ?? 'light'  
+      'data-theme',
+      savedTheme ?? 'light'
     );
   }
 
@@ -38,14 +46,23 @@ export class Topbar {
     this.isDarkTheme = !this.isDarkTheme;
     const theme = this.isDarkTheme ? 'dark' : 'light';
     document.documentElement.setAttribute(
-      `data-theme`,
+      'data-theme',
       theme
-    )
-    localStorage.setItem('theme', theme);
+    );
+    try {
+      localStorage.setItem('theme', theme);
+    } catch {
+      // localStorage may be unavailable (e.g. private browsing)
+    }
   }
 
   logout() {
-    // Implement logout logic here, such as clearing tokens and redirecting to the login page
-    console.log('User logged out');
+    try {
+      localStorage.removeItem('token');
+      sessionStorage.clear();
+    } catch {
+      // Storage may be unavailable
+    }
+    this.router.navigate(['/login']);
   }
 }
