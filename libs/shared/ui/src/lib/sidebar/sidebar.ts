@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faUsers, faUser, faMedal, faTachographDigital, faBriefcase, faCreditCard, faChartSimple} from '@omnisphere-portal/util'
+import { NAVIGATION_ICONS } from '@omnisphere-portal/util';
 
 @Component({
   selector: 'lib-sidebar',
@@ -13,12 +13,13 @@ import { faUsers, faUser, faMedal, faTachographDigital, faBriefcase, faCreditCar
   styleUrl: './sidebar.css',
 })
 export class Sidebar {
+  readonly icons = NAVIGATION_ICONS;
 
-  faUsers = faUsers;
-  faUser = faUser;
-  faMedal = faMedal;
-  faTachographDigital = faTachographDigital;
-  faBriefcase = faBriefcase;
-  faCreditCard = faCreditCard;
-  faChartSimple = faChartSimple;
+  faUsers = this.icons.faUsers;
+  faUser = this.icons.faUser;
+  faMedal = this.icons.faMedal;
+  faTachographDigital = this.icons.faTachographDigital;
+  faBriefcase = this.icons.faBriefcase;
+  faCreditCard = this.icons.faCreditCard;
+  faChartSimple = this.icons.faChartSimple;
 }

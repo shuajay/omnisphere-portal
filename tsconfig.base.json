@@ -51,6 +51,9 @@
       ],
       "@omnisphere-portal/feature-performance": [
         "./libs/talent/feature-performance/src/index.ts"
+      ],
+      "@omnisphere-portal/testing": [
+        "./libs/shared/testing/src/index.ts"
       ]
     }
   },
