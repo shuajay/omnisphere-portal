@@ -1,12 +1,25 @@
 import { Route } from '@angular/router';
 import { ShellLayout } from './shell-layout/shell-layout';
 import { Dashboard } from './dashboard/dashboard';
+import { NotFound } from './not-found/not-found';
+
+function loadRemote(
+  loader: () => Promise<{ remoteRoutes: Route[] }>
+): () => Promise<Route[]> {
+  return () =>
+    loader().then((m) => {
+      if (!m?.remoteRoutes) {
+        throw new Error('Remote module did not expose remoteRoutes');
+      }
+      return m.remoteRoutes;
+    });
+}
 
 export const appRoutes: Route[] = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
-    loadChildren: () => import('auth/Routes').then((m) => m!.remoteRoutes),
+    loadChildren: loadRemote(() => import('auth/Routes')),
   },
   {
     path: '',
@@ -15,16 +28,17 @@ export const appRoutes: Route[] = [
       { path: 'dashboard', component: Dashboard },
       {
         path: 'talent',
-        loadChildren: () => import('talent/Routes').then((m) => m!.remoteRoutes),
+        loadChildren: loadRemote(() => import('talent/Routes')),
       },
       {
         path: 'workforce',
-        loadChildren: () => import('workforce/Routes').then((m) => m!.remoteRoutes),
+        loadChildren: loadRemote(() => import('workforce/Routes')),
       },
       {
         path: 'coreHr',
-        loadChildren: () => import('coreHr/Routes').then((m) => m!.remoteRoutes),
+        loadChildren: loadRemote(() => import('coreHr/Routes')),
       },
     ],
   },
+  { path: '**', component: NotFound },
 ];
