@@ -1,21 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { createComponentTests } from '@omnisphere-portal/testing';
 import { Ui } from './ui';
 
-describe('Ui', () => {
-  let component: Ui;
-  let fixture: ComponentFixture<Ui>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Ui],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(Ui);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+createComponentTests(Ui, 'Ui');
