@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
-import { NxWelcome } from './nx-welcome';
+import { NxWelcome } from '../nx-welcome';
 import { Router, RouterModule } from '@angular/router';
 
 describe('App', () => {
